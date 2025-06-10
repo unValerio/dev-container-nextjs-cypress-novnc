@@ -40,10 +40,7 @@ RUN useradd -m -s /bin/bash vscode \
     && echo "vscode ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/vscode
 
 # Set the working directory
-WORKDIR /home/vscode/project
-
-# Copy project files as vscode user
-COPY --chown=vscode:vscode . .
+WORKDIR /workspace
 
 # Switch to the non-root user
 USER vscode

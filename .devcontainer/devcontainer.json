@@ -9,6 +9,7 @@
     "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
     "source=${localWorkspaceFolderBasename}-node_modules,target=/workspace/node_modules,type=volume"
   ],
+  "updateContentCommand": "sudo chown -R vscode:vscode /workspace",
   "customizations": {
     "vscode": {
       "extensions": [
