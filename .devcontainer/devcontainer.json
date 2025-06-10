@@ -7,7 +7,7 @@
   "workspaceFolder": "/workspace",
   "mounts": [
     "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-    "source=${localWorkspaceFolder}-node_modules,target=/workspace/node_modules,type=volume"
+    "source=${localWorkspaceFolderBasename}-node_modules,target=/workspace/node_modules,type=volume"
   ],
   "customizations": {
     "vscode": {
