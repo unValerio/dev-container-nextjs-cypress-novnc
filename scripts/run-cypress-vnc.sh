@@ -27,4 +27,4 @@ sleep 10
 
 # Start Cypress
 echo "Starting Cypress..."
-npm run cypress:open
+npx cypress open
