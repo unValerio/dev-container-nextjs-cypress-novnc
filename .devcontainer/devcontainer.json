@@ -1,0 +1,18 @@
+{
+  "name": "Next.js Cypress Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  },
+  "forwardPorts": [3000, 6080],
+  "postCreateCommand": "npm install && chmod +x scripts/run-cypress-vnc.sh",
+  "remoteUser": "vscode"
+}

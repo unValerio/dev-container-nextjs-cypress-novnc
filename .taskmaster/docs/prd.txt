@@ -1,0 +1,42 @@
+# Product Requirements Document (PRD)
+
+## 1. Project Title
+
+Dev Container with Next.js, Cypress, and noVNC
+
+## 2. Project Goal
+
+The primary goal is to create a self-contained VS Code Dev Container for developing and testing a Next.js application. The environment should include Cypress for end-to-end testing and a VNC/noVNC setup to allow developers to view and interact with the Cypress test runner's UI from their local machine's browser.
+
+## 3. Dev Container Setup
+
+- **Base Image:** The dev container will be based on Ubuntu 24.04.
+- **Core Dependencies:**
+  - Node.js (latest LTS version)
+  - npm or yarn for package management.
+- **VS Code Integration:**
+  - A `devcontainer.json` file will be configured to define the container environment, including necessary extensions and port forwarding.
+  - A `Dockerfile` will be used to build the container image with all the required dependencies.
+
+## 4. Next.js Application
+
+- A basic, single-page Next.js application will be created as a starting point for development. This will serve as the application under test for Cypress.
+
+## 5. Cypress and VNC/noVNC Integration
+
+- **Cypress Installation:** Cypress will be installed as a development dependency in the Next.js project.
+- **VNC Server:** `tigervnc-standalone-server` will be installed in the container to provide the VNC server functionality.
+- **noVNC:** noVNC will be installed to provide a web-based VNC client.
+- **Orchestration Script:** A shell script will be created to:
+  1. Start the VNC server.
+  2. Launch the Cypress test runner (`cypress open`).
+  3. Start the noVNC client, connecting it to the VNC server.
+- **Port Forwarding:** The `devcontainer.json` will be configured to forward the noVNC port (e.g., 6080) to the local machine, allowing the user to access the Cypress UI by navigating to `http://localhost:6080` in their browser.
+
+## 6. User Workflow
+
+1. The user opens the project in VS Code.
+2. VS Code prompts the user to reopen the project in the Dev Container.
+3. Once the container is built and running, the user can open a terminal in VS Code.
+4. The user runs a single command (e.g., `npm run cypress:open:vnc`) to start the VNC server, Cypress, and noVNC.
+5. The user opens `http://localhost:6080` (or the forwarded port) in their local browser to see and interact with the Cypress UI.
