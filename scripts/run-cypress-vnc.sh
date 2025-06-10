@@ -1,14 +1,13 @@
 #!/bin/bash
 
-# Set the VNC password
-export VNC_PASSWORD=password
+# Set up VNC password file (required by vncserver)
 mkdir -p ~/.vnc
-echo $VNC_PASSWORD | vncpasswd -f > ~/.vnc/passwd
+touch ~/.vnc/passwd
 chmod 600 ~/.vnc/passwd
 
 # Start the VNC server in the background
 echo "Starting VNC server..."
-vncserver :1 -geometry 1280x720 -depth 24
+vncserver :1 -geometry 1280x720 -depth 24 -SecurityTypes None
 
 # Start noVNC in the background
 echo "Starting noVNC..."

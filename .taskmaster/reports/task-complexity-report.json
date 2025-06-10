@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2025-06-10T19:38:33.906Z",
+    "generatedAt": "2025-06-10T19:51:37.222Z",
     "tasksAnalyzed": 1,
-    "totalTasks": 11,
-    "analysisCount": 1,
+    "totalTasks": 12,
+    "analysisCount": 2,
     "thresholdScore": 5,
     "projectName": "Taskmaster",
     "usedResearch": false
@@ -16,6 +16,14 @@
       "recommendedSubtasks": 4,
       "expansionPrompt": "Break down the 'Fix VNC and Cypress Setup Issues' task into 4 subtasks: 1) Diagnose and fix VNC server startup failures, 2) Resolve Cypress installation and executable issues, 3) Fix noVNC connection problems, and 4) Update and test the orchestration script. For each subtask, include specific steps, commands to run, files to modify, and verification tests.",
       "reasoning": "This task involves debugging and fixing multiple interconnected components (VNC server, Cypress, noVNC) with specific technical requirements. The complexity is high (7/10) because it requires deep understanding of these systems, shell scripting, and environment configuration. The task naturally divides into 4 subtasks based on the components mentioned in the description. Each component has its own set of issues that need separate investigation and resolution, but they must work together in the end. The testing strategy is comprehensive and requires verification at multiple levels."
+    },
+    {
+      "taskId": 12,
+      "taskTitle": "Improve Cypress/VNC Usability and Fix Configuration",
+      "complexityScore": 6,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the 'Improve Cypress/VNC Usability and Fix Configuration' task into 4 subtasks: 1) Update Cypress to the latest version and verify compatibility, 2) Configure noVNC for passwordless access, 3) Resolve TypeScript configuration errors in Cypress setup, and 4) Update and test package.json scripts for the new configuration. For each subtask, include specific implementation steps, acceptance criteria, and testing procedures.",
+      "reasoning": "This task has moderate complexity (6/10) because it involves multiple technical components (Cypress, VNC, TypeScript configuration) that interact with each other. The task is well-defined with clear implementation steps, but requires understanding of several systems and careful testing to ensure everything works together. The four natural divisions align with the four main components described in the task details, making it logical to split into these subtasks for better tracking and implementation."
     }
   ]
 }

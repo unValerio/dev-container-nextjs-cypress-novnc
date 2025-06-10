@@ -42,7 +42,8 @@ RUN apt-get update && apt-get install -y \
 
 # Install noVNC
 RUN mkdir -p /opt/novnc \
-    && wget -qO- https://github.com/novnc/noVNC/archive/refs/tags/v1.4.0.tar.gz | tar xz --strip 1 -C /opt/novnc
+    && wget -qO- https://github.com/novnc/noVNC/archive/refs/tags/v1.4.0.tar.gz | tar xz --strip 1 -C /opt/novnc \
+    && ln -s /opt/novnc/vnc.html /opt/novnc/index.html
 
 # Create a non-root user
 RUN useradd -m -s /bin/bash vscode \
