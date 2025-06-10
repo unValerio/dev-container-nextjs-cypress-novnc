@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "generatedAt": "2025-06-10T19:38:33.906Z",
+    "tasksAnalyzed": 1,
+    "totalTasks": 11,
+    "analysisCount": 1,
+    "thresholdScore": 5,
+    "projectName": "Taskmaster",
+    "usedResearch": false
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 11,
+      "taskTitle": "Fix VNC and Cypress Setup Issues",
+      "complexityScore": 7,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Break down the 'Fix VNC and Cypress Setup Issues' task into 4 subtasks: 1) Diagnose and fix VNC server startup failures, 2) Resolve Cypress installation and executable issues, 3) Fix noVNC connection problems, and 4) Update and test the orchestration script. For each subtask, include specific steps, commands to run, files to modify, and verification tests.",
+      "reasoning": "This task involves debugging and fixing multiple interconnected components (VNC server, Cypress, noVNC) with specific technical requirements. The complexity is high (7/10) because it requires deep understanding of these systems, shell scripting, and environment configuration. The task naturally divides into 4 subtasks based on the components mentioned in the description. Each component has its own set of issues that need separate investigation and resolution, but they must work together in the end. The testing strategy is comprehensive and requires verification at multiple levels."
+    }
+  ]
+}

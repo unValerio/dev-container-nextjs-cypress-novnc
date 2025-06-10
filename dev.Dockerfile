@@ -55,7 +55,7 @@ RUN mkdir -p /home/vscode/.vnc && \
     echo 'unset DBUS_SESSION_BUS_ADDRESS' >> /home/vscode/.vnc/xstartup && \
     echo 'xsetroot -solid grey' >> /home/vscode/.vnc/xstartup && \
     echo 'xterm -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &' >> /home/vscode/.vnc/xstartup && \
-    echo 'fluxbox &' >> /home/vscode/.vnc/xstartup && \
+        echo 'fluxbox' >> /home/vscode/.vnc/xstartup && \
     chmod +x /home/vscode/.vnc/xstartup && \
     chown -R vscode:vscode /home/vscode/.vnc
 

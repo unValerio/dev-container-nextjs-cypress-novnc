@@ -12,6 +12,9 @@ vncserver :1 -geometry 1280x720 -depth 24
 
 # Start noVNC in the background
 echo "Starting noVNC..."
+echo "
+>>> Open http://localhost:6080/vnc.html to view the Cypress UI <<<
+"
 websockify --web /opt/novnc/ 6080 localhost:5901 &
 
 # Set the display for Cypress to use the VNC server
@@ -24,6 +27,13 @@ npm run dev &
 # Wait for the dev server to be ready
 # (A more robust solution would use a tool like wait-on)
 sleep 10
+
+# Verify Cypress installation and install if needed
+echo "Verifying Cypress installation..."
+if ! npx cypress verify; then
+    echo "Cypress not verified. Attempting to install..."
+    npx cypress install
+fi
 
 # Start Cypress
 echo "Starting Cypress..."
