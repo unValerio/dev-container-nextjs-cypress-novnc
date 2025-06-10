@@ -8,11 +8,11 @@ chmod 600 ~/.vnc/passwd
 
 # Start the VNC server in the background
 echo "Starting VNC server..."
-vncserver :1 -geometry 1280x720 -depth 24 -localhost no
+vncserver :1 -geometry 1280x720 -depth 24
 
 # Start noVNC in the background
 echo "Starting noVNC..."
-/opt/novnc/utils/launch.sh --vnc localhost:5901 --listen 6080 &
+websockify --web /opt/novnc/ 6080 localhost:5901 &
 
 # Set the display for Cypress to use the VNC server
 export DISPLAY=:1
